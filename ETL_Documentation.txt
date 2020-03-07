@@ -4,15 +4,17 @@ GROUP NAME: 3 MUSKETEERS
 
 1. E - WHAT WERE OUR ORIGNAL DATA SOURCES AND HOW THE DATA FORMATTED?
 
-	We pulled our data from the below websites:
+	We pulled our data from the following websites:
 	
-		Baseball defense & offensive stats:https://www.baseball-reference.com/leagues/MLB/2015.shtml#teams_standard_pitching::none
+		Baseball defense & offensive stats: https://www.baseball-reference.com/leagues/MLB/2015.shtml#teams_standard_pitching::none
 		
-		Attendence by team by year:
+		Attendance by team by year:
 		https://www.kaggle.com/timschutzyang/dataset1/version/1#baseballdata.csv
 		
+		Team Data Map Source:
+		https://www.smartfantasybaseball.com/2015/09/new-tool-mlb-team-id-map/
 		
-	Both of our datasets were CSV files
+	All of our datasets were CSV files
 	
 	
 2. T - WHAT TRANSFORMATION WAS NEEDED FOR THE DATA? (CLEANING, JOINING, ETC.)
@@ -20,6 +22,8 @@ GROUP NAME: 3 MUSKETEERS
 	The offensive and defensive datasets both had many more data points than we needed, we slimmed down the stats to only 5 different stats for each. We also had to get rid of a two rows, a NaN and an average row. We also renamed the columns from the original acronyms to what the acronyms stand for (Tm to Team, SV to Saves, etc._)
 	
 	The Attendence by team had over 5 years of data, we were only looking for 2015 so all other years were filtered out.
+	
+	The Team Map Data Source contained the abbreviations commonly used for several baseball data websites. These included Fangraphs, Baseball Reference, FanDuel, DraftKings, Yahoo!, ESPN, FantasyPros, BaseballPress, Baseball Prospectus, Rotowire. We used excel formulas to update the team name list to convert to proper format, remove the MLB indicator, and remove all hyphens.
 	
 	
 	
