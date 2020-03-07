@@ -35,13 +35,16 @@ GROUP NAME: 3 MUSKETEERS
 	
 3. L - Describe the final database, tables/collections and why were they choosen
 
-	We end up with four different SQL databases:
+	We end up with five different tables in our SQL database:
 		1. Batting stats
 		2. Defensive stats
 		3. Attendance by team
 		4. Team Acronym to team name
+		5. Team Payroll Data
 		
 	Each database can be joined by team name/acronym. We can create all kinds of different baseball stats anaylsis vs game attendence for each team in 2015.
+	
+	We can load the data into SQL in order to join data across different sources, utilizing the team keys document to join on team ID or abbreviation (depending on the ID used by the specific source).
 	
 		
 		
