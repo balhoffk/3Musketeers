@@ -1,0 +1,38 @@
+PROJECT 2: ETL
+GROUP NAME: 3 MUSKETEERS
+
+
+1. E - WHAT WERE OUR ORIGNAL DATA SOURCES AND HOW THE DATA FORMATTED?
+
+	We pulled our data from the below websites:
+	
+		Baseball defense & offensive stats:https://www.baseball-reference.com/leagues/MLB/2015.shtml#teams_standard_pitching::none
+		
+		Attendence by team by year:
+		https://www.kaggle.com/timschutzyang/dataset1/version/1#baseballdata.csv
+		
+		
+	Both of our datasets were CSV files
+	
+	
+2. T - WHAT TRANSFORMATION WAS NEEDED FOR THE DATA? (CLEANING, JOINING, ETC.)
+
+	The offensive and defensive datasets both had many more data points than we needed, we slimmed down the stats to only 5 different stats for each. We also had to get rid of a two rows, a NaN and an average row. We also renamed the columns from the original acronyms to what the acronyms stand for (Tm to Team, SV to Saves, etc._)
+	
+	The Attendence by team had over 5 years of data, we were only looking for 2015 so all other years were filtered out.
+	
+	
+	
+3. L - Describe the final database, tables/collections and why were they choosen
+
+	We end up with four different SQL databases:
+		1. Batting stats
+		2. Defensive stats
+		3. Attendence by team
+		4. Team Acronym to team name
+		
+	Each database can be joined by team name/acronym. We can create all kinds of different baseball stats anaylsis vs game attendence for each team in 2015. 
+	
+		
+		
+		
