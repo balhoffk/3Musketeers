@@ -14,6 +14,10 @@ GROUP NAME: 3 MUSKETEERS
 		Team Data Map Source:
 		https://www.smartfantasybaseball.com/2015/09/new-tool-mlb-team-id-map/
 		
+		Team Payroll Data by Year:
+		https://github.com/glamp/mlb-payroll-and-wins
+		Data sourced from FiveThirtyEight
+		
 	All of our datasets were CSV files
 	
 	
@@ -25,6 +29,8 @@ GROUP NAME: 3 MUSKETEERS
 	
 	The Team Map Data Source contained the abbreviations commonly used for several baseball data websites. These included Fangraphs, Baseball Reference, FanDuel, DraftKings, Yahoo!, ESPN, FantasyPros, BaseballPress, Baseball Prospectus, Rotowire. We used excel formulas to update the team name list to convert to proper format, remove the MLB indicator, and remove all hyphens.
 	
+	Team Salary Data was taken from FiveThirtyEight research (originally scraped from Baseball Reference). We cloned the repository to our desktop and took the salary data from the mlb-payroll-and-wins CSV file, and then added that to our files. By using the "tm" indicatory, we can join the salary data with our other files using the BBREF team abbrevation.
+	
 	
 	
 3. L - Describe the final database, tables/collections and why were they choosen
@@ -32,10 +38,10 @@ GROUP NAME: 3 MUSKETEERS
 	We end up with four different SQL databases:
 		1. Batting stats
 		2. Defensive stats
-		3. Attendence by team
+		3. Attendance by team
 		4. Team Acronym to team name
 		
-	Each database can be joined by team name/acronym. We can create all kinds of different baseball stats anaylsis vs game attendence for each team in 2015. 
+	Each database can be joined by team name/acronym. We can create all kinds of different baseball stats anaylsis vs game attendence for each team in 2015.
 	
 		
 		
