@@ -29,7 +29,7 @@ GROUP NAME: 3 MUSKETEERS
 	
 	The Team Map Data Source contained the abbreviations commonly used for several baseball data websites. These included Fangraphs, Baseball Reference, FanDuel, DraftKings, Yahoo!, ESPN, FantasyPros, BaseballPress, Baseball Prospectus, Rotowire. We used excel formulas to update the team name list to convert to proper format, remove the MLB indicator, and remove all hyphens.
 	
-	Team Salary Data was taken from FiveThirtyEight research (originally scraped from Baseball Reference). We cloned the repository to our desktop and took the salary data from the mlb-payroll-and-wins CSV file, and then added that to our files. By using the "tm" indicatory, we can join the salary data with our other files using the BBREF team abbrevation.
+	Team Salary Data was taken from FiveThirtyEight research (originally scraped from Baseball Reference). We cloned the repository to our desktop and took the salary data from the mlb-payroll-and-wins CSV file, and then added that to our files. By using the "tm" indicator, we can join the salary data with our other files using the BBREF team abbrevation.
 	
 	
 	
@@ -37,10 +37,12 @@ GROUP NAME: 3 MUSKETEERS
 
 	We end up with five different tables in our SQL database:
 		1. Batting stats
-		2. Defensive stats
-		3. Attendance by team
-		4. Team Acronym to team name
-		5. Team Payroll Data
+		2. Attendance by team
+		3. Team Acronym to team name
+		
+	We also have other data sources that could be added at a later date to contribute to our database.
+		1. Defensive stats
+		2. Team Payroll data
 		
 	Each database can be joined by team name/acronym. We can create all kinds of different baseball stats anaylsis vs game attendance for each team in 2015.
 	
@@ -49,6 +51,8 @@ GROUP NAME: 3 MUSKETEERS
 	As an example, in our BaseballData jupyter notebook, we took the keys document and pulled the Baseball Reference Abbreviation ID from the Attendance key ID from the 2015batting.csv file and the Baseballdata.csv file, respectively.
 	
 	After loading the CSVs into the Jupyter Notebook, we linked the two sets of data on their team IDs, and pulled out the attendance data from the baseballdata.csv file so that we could compare attendance to the number of home runs a team hit. This join can be found in salary_bbref_schema. After some python code was added in our baseballdata jupyter notebook, we filtered the datasets down to only contain information from the 2015 season, and then joined the datasets. Now we can compare data from the different datasets.
+	
+	We took screenshots of what our final database looks like in our pgAdmin ready for further analysis.
 		
 		
 		
